@@ -6,6 +6,7 @@ export const useCounterStore = defineStore('product', () => {
   const selectedColor = ref();
   const selectedImage = ref();
   const selectedSize = ref();
+  const transferType = ref('receive');
 
   function updateSelectedProduct(item: any) {
     selectedProduct.value = item;
@@ -19,15 +20,20 @@ export const useCounterStore = defineStore('product', () => {
   function updateSelectedSize(item: any) {
     selectedSize.value = item;
   }
+  function updateTransferType(item: any) {
+    transferType.value = item;
+  }
 
   return {
     selectedProduct,
     selectedColor,
     selectedImage,
     selectedSize,
+    transferType,
     updateSelectedProduct,
     updateSelectedColor,
     updateSelectedImage,
     updateSelectedSize,
+    updateTransferType,
   };
 });

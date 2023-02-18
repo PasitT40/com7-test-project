@@ -5,12 +5,13 @@
       :key="size.name"
       :class="{ active: selectedSize.size == size.size }"
       @click="selectSize(size)"
-      class="col-span-1 md:col-span-1 flex justify-center m-9 p-10 border"
+      class="col-span-1 md:col-span-1 flex justify-center p-7 m-2 border rounded-md"
     >
-      {{ size?.size }}
+      {{ size.size }}
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 //init pinia and use store
 import { useCounterStore } from '@/stores/product';
@@ -23,13 +24,8 @@ const { selectedColor, selectedSize } = storeToRefs(store);
 //function
 const { updateSelectedSize } = store;
 
-//init prop
-const props = defineProps({
-  res: Array,
-});
-
 //methods
-function selectSize(item) {
+function selectSize(item: any) {
   updateSelectedSize(item);
 }
 </script>

@@ -5,9 +5,24 @@
       :key="colors.color"
       @click="selectColor(colors)"
       :class="{ active: selectedColor.color == colors.color }"
-      class="col-span-1 md:col-span-1 flex justify-center m-9 p-10 border"
+      class="col-span-1 md:col-span-1 grid grid-cols-1 md:grid-cols-1 flex justify-center p-7 m-2 border rounded-md"
     >
-      {{ colors?.color }}
+      <div class="grid grid-cols-1 md:grid-cols-1">
+        <div class="flex justify-center">
+          <button
+            type="button"
+            class="rounded-full cols-span-1"
+            :style="{
+              height: 45 + 'px',
+              width: 45 + 'px',
+              backgroundColor: '#' + colors.color_hex,
+            }"
+          ></button>
+        </div>
+      </div>
+      <div class="flex justify-center mt-2">
+        <span class="font-medium">{{ colors.color }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -19,22 +34,12 @@ import { storeToRefs } from 'pinia';
 const store = useCounterStore();
 
 //variable
-const { selectedProduct, selectedImage, selectedColor } = storeToRefs(store);
+const { selectedProduct, selectedColor } = storeToRefs(store);
 //function
-const {
-  updateSelectedProduct,
-  updateSelectedImage,
-  updateSelectedColor,
-  updateSelectedSize,
-} = store;
-
-//init prop
-const props = defineProps({
-  res: Array,
-});
+const { updateSelectedImage, updateSelectedColor, updateSelectedSize } = store;
 
 //methods
-function selectColor(selectItem) {
+function selectColor(selectItem: any) {
   console.log(selectItem);
   updateSelectedColor(selectItem);
   updateSelectedImage(selectItem.image_url);
