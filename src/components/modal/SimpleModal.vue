@@ -199,13 +199,15 @@ const emit = defineEmits<{
           </svg>
         </div>
         <div class="flex justify-center items-center">
-          <span class="text-2xl font-semibold my-3"
+          <span class="text-2xl md:text-4xl font-semibold my-3"
             >การสั่งซื้อล่วงหน้าสำเร็จ</span
           >
         </div>
         <div class="flex justify-center items-center grid grid-cols-1">
-          <div class="flex justify-center">การชำระเงินของคุณสำเร็จแล้ว!</div>
-          <div class="flex justify-center">
+          <div class="flex justify-center md:text-xl">
+            การชำระเงินของคุณสำเร็จแล้ว!
+          </div>
+          <div class="flex justify-center md:text-xl">
             ตอนนี้เราจะส่งอีเมลยืนยันคำสั่งซื้อสำเร็จให้คุณ
           </div>
         </div>

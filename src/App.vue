@@ -10,7 +10,7 @@
         class="responsive sticky top-0"
       />
     </div>
-    <div class="col-span-1 md:col-span-1 p-7 md:mt-10">
+    <div class="col-span-1 md:col-span-1 md:px-40 md:mt-10 p-10">
       <div class="my-5">
         <span class="text-4xl font-semibold">ซื้อ iPhobe 13</span>
       </div>
@@ -22,11 +22,22 @@
         <span class="text-3xl font-medium">สี</span>
       </div>
       <SelectColors />
+      <div class="my-10">
+        <span class="text-3xl font-medium">ขนาด</span>
+      </div>
       <SelectSize />
+      <div class="mt-10 mb-5">
+        <span class="text-2xl font-medium">คุณต้องการรับสินค้าด้วยวิธีใด</span>
+      </div>
       <TransferType />
-      <div>
-        <button type="button" class="btn rounded-md p-2" @click="() => open()">
-          <span class="text-base text-semibold">ยืนยันการสั่งซื้อล่วงหน้า</span>
+      <div class="border my-10"></div>
+      <div class="mt-5">
+        <button
+          type="button"
+          class="btn md:w-full rounded-md p-2 md:h-12"
+          @click="() => submit()"
+        >
+          <span class="text-xl text-semibold">ยืนยันการสั่งซื้อล่วงหน้า</span>
         </button>
       </div>
     </div>
@@ -76,8 +87,18 @@ const {
   updateSelectedSize,
 } = store;
 
-function submit() {
-  console.log(selectedSize.value);
+async function submit() {
+  const selectId: number = Number(selectedSize.value.id);
+  await axios
+    .post('https://interview.com7.in/api/pre-order', {
+      id: selectId,
+    })
+    .then((res: any) => {
+      open();
+    })
+    .catch((error: any) => {
+      //if got error
+    });
 }
 
 onMounted(async () => {
@@ -115,18 +136,4 @@ onMounted(async () => {
 });
 </script>
 
-<style>
-.responsive {
-  width: 600px;
-  height: auto;
-}
-.active {
-  border: solid 3px green;
-}
-.btn {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(11, 194, 11, 0.911) !important;
-  color: white;
-}
-</style>
+<style></style>

@@ -40,7 +40,6 @@ const { updateSelectedImage, updateSelectedColor, updateSelectedSize } = store;
 
 //methods
 function selectColor(selectItem: any) {
-  console.log(selectItem);
   updateSelectedColor(selectItem);
   updateSelectedImage(selectItem.image_url);
   updateSelectedSize(selectItem.data[0]);

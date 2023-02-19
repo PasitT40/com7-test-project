@@ -4,3 +4,17 @@ body {
   background-color: white;
   font-family: 'Athiti', sans-serif;
 }
+
+.responsive {
+  width: 600px;
+  height: auto;
+}
+.active {
+  border: solid 3px green;
+}
+.btn {
+  width: 100%;
+  height: 100%;
+  background-color: #5bba47 !important;
+  color: white;
+}
