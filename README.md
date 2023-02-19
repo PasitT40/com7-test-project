@@ -2,24 +2,34 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Must do List
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- ตรงปุ่มเลือกรุ่นให้ sort ราคาที่แพงที่สุดขึ้นมาอันแรกก่อน / Completed
+- สามาถเลือกรุ่นได้แล้วเป็นขอบสีเขียว / Completed
+- เลือกสีเป็นขอบสีเขียว / Completed
+- เลือกขนาดเป็นขอบสีเขียว / Completed
+- เมื่อเลือกรุ่นหรือเลือกสีให้เปลี่ยนรูป Product ด้านซ้ายมือตามข้อมูบที่ API มีให้ / Completed
+- เมื่อเลือก model แสดงสีตาม api / Completed
+- เมื่อเลือกสี แสดง storage ตาม api / Completed
+- รูป Product จะต้องเปลี่ยนตาม model ที่เลือก และสีตามที่เลือกไว้ / Completed
+- รูป Product iPhone จะต้อง sticky ตาม scroll / Completed
+- มีปุ่ม checkout กดเสร็จขึ้น modal ว่าการสั่งซื้อสำเร็จ / Completed
 
-## Type Support for `.vue` Imports in TS
+## Stack List
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- Vue2 หรือ Vue3 หรือ Nuxt2 หรือ Nuxt3 เท่านั้น (กรณีเขียนด้วย TypeScript จะได้คะแนนพิเศษ) / Completed
+- สามารถใช้ CSS หรือ SCSS ได้ / Completed
+- windi , tailwind เพิ่มคะแนนพิเศษ (เผื่ออยากใช้กันหน่ะนะ) / Completed
+- สามารถแยก components ได้อย่างชัดเจน / Completed
+- สามารถใช้ state management ได้ เช่น vuex หรือ pinia / Completed
+- **Bonus**   / Not completed
+    - เขียน unit test โดยใช้ jest,vitest,veutr เป็นต้น
+    - e2e test
+    
+ ## GitHub and Deploy 
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- อัพโค้ดขึ้น github เปิด public / Completed
+- **Bonus** Deploy ขึ้น Vercel , Netlify  / Completed
 
 ## Project Setup
 
