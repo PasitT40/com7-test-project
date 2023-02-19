@@ -14,6 +14,8 @@ This template should help get you started developing with Vue 3 in Vite.
 - รูป Product จะต้องเปลี่ยนตาม model ที่เลือก และสีตามที่เลือกไว้ / Completed
 - รูป Product iPhone จะต้อง sticky ตาม scroll / Completed
 - มีปุ่ม checkout กดเสร็จขึ้น modal ว่าการสั่งซื้อสำเร็จ / Completed
+## Deploy Link 
+Netify : https://whimsical-horse-3b4057.netlify.app/
 
 ## Stack List
 
