@@ -25,11 +25,12 @@
       <SelectSize />
       <TransferType />
       <div>
-        <button type="button" class="btn rounded-md p-2" @click="submit()">
+        <button type="button" class="btn rounded-md p-2" @click="() => open()">
           <span class="text-base text-semibold">ยืนยันการสั่งซื้อล่วงหน้า</span>
         </button>
       </div>
     </div>
+    <ModalsContainer />
   </div>
 </template>
 
@@ -40,14 +41,30 @@ import { inject, onMounted, ref } from 'vue';
 
 import { storeToRefs } from 'pinia';
 
+import { ModalsContainer, useModal } from 'vue-final-modal';
+
 import SelectModel from '@/components/SelectModel.vue';
 import SelectColors from '@/components/SelectColors.vue';
 import SelectSize from '@/components/SelectSize.vue';
 import Navbar from '@/components/Navbar.vue';
 import TransferType from '@/components/TransferType.vue';
+import ModalConfirm from '@/components/modal/SimpleModal.vue';
 
 const axios: any = inject('axios');
 const store = useCounterStore();
+
+const { open, close } = useModal({
+  component: ModalConfirm,
+  attrs: {
+    title: 'Hello World!',
+    onConfirm() {
+      close();
+    },
+  },
+  slots: {
+    default: '<p>UseModal: The content of the modal</p>',
+  },
+});
 
 //variable
 const res = ref([]);
