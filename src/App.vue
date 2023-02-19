@@ -10,7 +10,7 @@
         class="responsive sticky top-0"
       />
     </div>
-    <div class="col-span-1 md:col-span-1 md:px-40 md:mt-10 p-10">
+    <div class="col-span-1 md:col-span-1 md:px-20 md:mt-10 p-10">
       <div class="my-5">
         <span class="text-4xl font-semibold">ซื้อ iPhobe 13</span>
       </div>
